@@ -54,8 +54,8 @@ git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter
 
 # Add jd 
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/node-request.git package/lean/node-request  #京东签到依赖
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus  #luci-app-jd-dailybonus[京东签到]
+#git clone https://github.com/jerrykuku/node-request.git package/lean/node-request  #京东签到依赖
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus  #luci-app-jd-dailybonus[京东签到]
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -69,14 +69,14 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 #git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
 # Add iptvhelper & luci-app-iptvhelper
-svn co https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
 
 # Add ServerChan
 #git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
-#git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
@@ -106,8 +106,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
 # Add luci-theme-rosy
-git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
-rm -rf ../lean/luci-theme-rosy
+#git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
+#rm -rf ../lean/luci-theme-rosy
 
 # Add tmate
 git clone --depth=1 https://github.com/project-openwrt/openwrt-tmate
@@ -130,8 +130,8 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter
 #popd
 
 # Add netdata
-rm -rf ../lean/netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
+#rm -rf ../lean/netdata
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 
 # luci-app-netdata
 rm -rf ../lean/luci-app-netdata
