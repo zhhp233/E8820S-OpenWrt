@@ -11,9 +11,9 @@
 
 name: OpenWrt-E8820S 开源固件
 
-on: 
-  release:
-    types: [published]
+on:
+  repository_dispatch:
+  workflow_dispatch:
 
 #编辑任意指定文件触发开始编译(去掉下面5个#开启,最下面一行是指定修改什么文件就触发编译,我现在是修改diy.config文件触发)
 #  push:
@@ -34,8 +34,8 @@ on:
 
 
 #点☆Star触发开始编译
-  watch:
-    types: started
+#  watch:
+#    types: started
 
 
 env:
@@ -55,7 +55,7 @@ env:
 jobs:
   build:
     name: 编译OpenWrt-lede固件
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: 准备结束
@@ -109,12 +109,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-    - name: SSH远程连接服务器配置固件
-      uses: P3TERX/ssh2actions@v1.0.0
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      env:
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
     - name: 下载软件包
       id: package
       run: |
